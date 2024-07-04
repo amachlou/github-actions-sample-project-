@@ -1,5 +1,5 @@
 name: OnPush Node WF
-on: push
+on: workflow_dispatch
 jobs: 
     first-one: 
         runs-on: ubuntu-latest
