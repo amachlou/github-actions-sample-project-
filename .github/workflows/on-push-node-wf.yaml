@@ -11,7 +11,7 @@ jobs:
             - name: Install NodeJs
               uses: actions/setup-node
               with:
-                node-version: '18'
+                node-version: '17'
             - name: install dependencies
               run: npm ci
             - name: Run tests
