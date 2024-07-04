@@ -1,0 +1,20 @@
+name: OnPush Node WF
+on: push
+jobs: 
+    first-one: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: Simple Msg
+              run: echo "**** Beginning ****"
+            - name: Get the code
+              uses: actions/checkout/v3
+            - name: Install NodeJs
+              uses: actions/setup-node
+              with:
+                node-version: '18'
+            - name: install dependencies
+              run: npm ci
+            - name: Run tests
+              run: npm test
+            - name: Simple Msg
+              run: echo "**** Beginning ****"
