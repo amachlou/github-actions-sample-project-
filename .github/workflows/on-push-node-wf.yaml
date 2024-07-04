@@ -9,12 +9,12 @@ jobs:
             - name: Get the code
               uses: actions/checkout@v3
             - name: Install NodeJs
-              uses: actions/setup-node
+              uses: actions/setup-node@v3
               with:
                 node-version: '17'
             - name: install dependencies
-            #   run: npm ci
-            # - name: Run tests
-            #   run: npm test
-            # - name: Simple Msg
-            #   run: echo "**** Beginning ****"
+              run: npm ci
+            - name: Run tests
+              run: npm test
+            - name: Simple Msg
+              run: echo "**** Beginning ****"
